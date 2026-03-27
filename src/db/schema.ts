@@ -6,10 +6,10 @@ export const voiceVariant = pgEnum("voice_variant", [
     "CUSTOM",
 ])
 
-export const voiceCATEGORY = pgEnum("voice_CATEGORY", [
+export const voiceCategory = pgEnum("voice_category", [
     "AUDIOBOOK",
     "CONVERSATIONAL",
-    "CUSGTOMER_SERVICE",
+    "CUSTOMER_SERVICE",
     "GENERAL",
     "NARRATIVE",
     "CHARACTERS",
@@ -20,7 +20,6 @@ export const voiceCATEGORY = pgEnum("voice_CATEGORY", [
     "CORPORATE",
 ])
 
-
 export const voice = pgTable("voice", {
     id: uuid("id").primaryKey().defaultRandom(),
 
@@ -28,7 +27,7 @@ export const voice = pgTable("voice", {
 
     name: text("name").notNull(),
     description: text("description"),     // optional
-    category: voiceCATEGORY("category").notNull().default("GENERAL"),
+    category: voiceCategory("category").notNull().default("GENERAL"),
     language: text("language").notNull().default("en-US"),
     variant: voiceVariant("variant").notNull(),
     r2ObjectKey: text("r2_object_key"),    // this will be the reference to s3 bucket where we will store the audio example of the voice

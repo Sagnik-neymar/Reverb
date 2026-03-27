@@ -1,17 +1,17 @@
 "use client"
 
-import LandingNavbar from '@/components/landing/components/navbar'
+import LandingNavbar from '@/features/landing/components/navbar'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import { toast } from 'sonner'
 import Image from 'next/image'
-import HeroText from '@/components/landing/components/sliding-hero-text'
+import HeroText from '@/features/landing/components/sliding-hero-text'
 import { motion } from "motion/react"
 
 
 const page = () => {
   return (
-    <div className='w-full max-h-screen overflow-hidden'>
+    <div className='w-full max-h-screen overflow-hidden '>
       <LandingNavbar />
       <div className='flex mt-8 justify-center gap-x-3 min-h-screen'>
         {/* left section */}

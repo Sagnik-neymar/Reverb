@@ -33,7 +33,7 @@ const HeroText = () => {
                     variants={lineVariants}
                     className="text-5xl font-semibold leading-tight"
                 >
-                    Self-Hosted <span className="text-emerald-600">Neural TTS</span>
+                    Self-Hosted <span className="text-emerald-500">Neural TTS</span>
                 </motion.div>
             </div>
 
